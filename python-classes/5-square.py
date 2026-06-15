@@ -32,10 +32,10 @@ class Square:
         self.__size = value
 
     def my_print(self):
-        """Print the square using # characters."""
+        """Print the square."""
         if self.__size == 0:
             print()
-            return None
+            return
 
-        for i in range(self.__size):
-            print('#' * self.__size)
+        for _ in range(self.__size):
+            print("#" * self.__size)
