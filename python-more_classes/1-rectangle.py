@@ -1,31 +1,39 @@
 #!/usr/bin/python3
-"""create a class with attribute"""
+"""Create a class with attribute"""
 
 
 class Rectangle:
-    """create class"""
-    def width(self, newW):
-        """define calss setter for width"""
-        if type(newW) is not int:
-            raise TypeError("width must be an integer")
-        if newW < 0:
-            raise ValueError("width must be >= 0")
-        self.width=newW
+    """Represent a rectangle."""
 
+    def __init__(self, width=0, height=0):
+        """Initialize rectangle."""
+        self.width = width
+        self.height = height
+
+    @property
     def width(self):
-        return self.width
+        """Get width."""
+        return self.__width
 
-    def height(self, newH):
-        """define calss setter for height"""
-        if type(newH) is not int:
-            raise TypeError("height must be an integer")
-        if newH < 0:
-            raise ValueError("height must be >= 0")
-        self.height=newH
-    
+    @width.setter
+    def width(self, value):
+        """Set width."""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+    @property
     def height(self):
-        return self.height
+        """Get height."""
+        return self.__height
 
-    def __init__(self, height=0, width=0):
-        self.width=width
-        self.height=height
+    @height.setter
+    def height(self, value):
+        """Set height."""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
