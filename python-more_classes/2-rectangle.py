@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Define a class to comput area and perimeter"""
+
+
 class Rectangle:
     """Represent a rectangle."""
 
@@ -40,6 +42,6 @@ class Rectangle:
         return self.__height*self.__width
 
     def perimeter(self):
-        if self.__height==0 or self.__width==0:
+        if self.__height == 0 or self.__width == 0:
             return 0
-        return (2*self.__height)+(2*self.__width)
+        return (2*self.__height) + (2*self.__width)
