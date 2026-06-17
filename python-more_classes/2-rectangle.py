@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""Define a class to comput area and perimeter"""
 class Rectangle:
     """Represent a rectangle."""
 
