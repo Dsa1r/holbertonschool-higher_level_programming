@@ -46,7 +46,7 @@ class Rectangle:
             return 0
         return (2*self.__height) + (2*self.__width)
 
-    def str(self):
+    def __str__(self):
         if self.__height == 0 or self.__width == 0:
             return
         for j in self.__height:
