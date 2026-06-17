@@ -2,6 +2,7 @@
 """defines the rectangle class."""
 
 
-class rectangle:
-    """class that does nothing"""
-    pass
+class Rectangle:
+    """class that does doc only"""
+
+
