@@ -4,5 +4,4 @@
 
 class Rectangle:
     """class that does doc only"""
-
-
+    pass
