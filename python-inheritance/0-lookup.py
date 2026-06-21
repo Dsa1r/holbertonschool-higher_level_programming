@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""define the inhertence method"""
+"""Define the inhertence method"""
 
 
 def lookup(obj):
-    return dir(obj)
+    """Define a list of attributes and methods of object"""
+    return list.obj
