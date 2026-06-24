@@ -12,13 +12,13 @@ class Animal(ABC):
         pass
 
 
-class dog(Animal):
+class Dog(Animal):
     """Define calss"""
     def sound(self):
         return "Bark"
 
 
-class cat(Animal):
-    """Definr a class"""
+class Cat(Animal):
+    """Define a class"""
     def sound(self):
         return "Meow"
