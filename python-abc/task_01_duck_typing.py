@@ -10,12 +10,10 @@ class Shape(ABC):
     @abstractmethod
     def area(self):
         """Return area."""
-        pass
 
     @abstractmethod
     def perimeter(self):
         """Return perimeter."""
-        pass
 
 
 class Circle(Shape):
