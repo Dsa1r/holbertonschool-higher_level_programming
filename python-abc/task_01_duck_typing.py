@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Define shapes using abstract base class and duck typing."""
+
 from abc import ABC, abstractmethod
 
 
@@ -7,49 +9,49 @@ class Shape(ABC):
 
     @abstractmethod
     def area(self):
-        """Calculate the area of the shape"""
+        """Return area."""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """Calculate the perimeter of the shape"""
+        """Return perimeter."""
         pass
 
 
 class Circle(Shape):
-    """Class representing a circle, inheriting from Shape."""
+    """Circle class."""
 
     def __init__(self, radius):
-        """Initialize a Circle with a given radius"""
+        """Initialize circle."""
         self.radius = radius
 
     def area(self):
-        """Calculate the area of the circle."""
-        return 3.141592653589793 * self.radius ** 2
+        """Calculate area."""
+        return 3.141592653589793 * (self.radius ** 2)
 
     def perimeter(self):
-        """Calculate the perimeter of the circle."""
+        """Calculate perimeter."""
         return 2 * 3.141592653589793 * self.radius
 
 
 class Rectangle(Shape):
-    """Class representing a rectangle, inheriting from Shape."""
+    """Rectangle class."""
 
     def __init__(self, width, height):
-        """Initialize a Rectangle with a given width and heigt"""
+        """Initialize rectangle."""
         self.width = width
         self.height = height
 
     def area(self):
-        """Calculate the area of the rectangle."""
+        """Calculate area."""
         return self.width * self.height
 
     def perimeter(self):
-        """Calculate the perimeter of the rectangle"""
+        """Calculate perimeter."""
         return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
-    """Print the area and perimeter of a shape"""
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+    """Print shape info."""
+    print("Area:", shape.area())
+    print("Perimeter:", shape.perimeter())
