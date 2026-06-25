@@ -21,7 +21,7 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """Initialize circle."""
-        self.radius = radius  # يمر على setter
+        self.radius = abs(radius)
 
     @property
     def radius(self):
@@ -47,8 +47,8 @@ class Rectangle(Shape):
 
     def __init__(self, width, height):
         """Initialize rectangle."""
-        self.width = width   # يمر على setter
-        self.height = height
+        self.width = abs(width)  
+        self.height = abs(height)
 
     @property
     def width(self):
