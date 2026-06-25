@@ -21,15 +21,25 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """Initialize circle."""
-        self.radius = abs(radius)
+        self.radius = radius  # يمر على setter
+
+    @property
+    def radius(self):
+        """Get radius."""
+        return self.__radius
+
+    @radius.setter
+    def radius(self, value):
+        """Set radius (always positive)."""
+        self.__radius = abs(value)
 
     def area(self):
         """Calculate area."""
-        return 3.141592653589793 * (self.radius ** 2)
+        return 3.141592653589793 * (self.__radius ** 2)
 
     def perimeter(self):
         """Calculate perimeter."""
-        return 2 * 3.141592653589793 * self.radius
+        return 2 * 3.141592653589793 * self.__radius
 
 
 class Rectangle(Shape):
@@ -37,16 +47,36 @@ class Rectangle(Shape):
 
     def __init__(self, width, height):
         """Initialize rectangle."""
-        self.width = abs(width)
-        self.height = abs(height)
+        self.width = width   # يمر على setter
+        self.height = height
+
+    @property
+    def width(self):
+        """Get width."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Set width (always positive)."""
+        self.__width = abs(value)
+
+    @property
+    def height(self):
+        """Get height."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Set height (always positive)."""
+        self.__height = abs(value)
 
     def area(self):
         """Calculate area."""
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
         """Calculate perimeter."""
-        return 2 * (self.width + self.height)
+        return 2 * (self.__width + self.__height)
 
 
 def shape_info(shape):
