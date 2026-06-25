@@ -16,6 +16,7 @@ class Shape(ABC):
         """Calculate the perimeter of the shape"""
         pass
 
+
 class Circle(Shape):
     """Class representing a circle, inheriting from Shape."""
 
@@ -47,6 +48,7 @@ class Rectangle(Shape):
     def perimeter(self):
         """Calculate the perimeter of the rectangle"""
         return 2 * (self.width + self.height)
+
 
 def shape_info(shape):
     """Print the area and perimeter of a shape"""
