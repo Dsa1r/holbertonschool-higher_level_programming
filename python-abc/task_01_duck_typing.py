@@ -37,6 +37,15 @@ class Rectangle(Shape):
 
     def __init__(self, width, height):
         """Initialize rectangle."""
+        if type(width) is not int and type(width) is not float:
+            raise TypeError("width must be a number")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if type(height) is not int and type(height) is not float:
+            raise TypeError("height must be a number")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+
         self.width = width
         self.height = height
 
