@@ -1,23 +1,28 @@
-#!/usr/bin/python3
-"""Define the module"""
+#!/usr/bin/env python3
+"""Define a VerboseList class that extends list."""
 
 
 class VerboseList(list):
-    """Define the class"""
+    """A list that prints notifications on changes."""
 
-    def append(self, num):
-        super.append(num)
-        print(f"Added {num} to the list.")
+    def append(self, item):
+        """Add item and print message."""
+        super().append(item)
+        print(f"Added [{item}] to the list.")
 
-    def extend(self, iterater):
-        super.extend(iterater)
-        print(f"Extended the list with {x} items.")
+    def extend(self, iterable):
+        """Extend list and print message."""
+        count = len(iterable)
+        super().extend(iterable)
+        print(f"Extended the list with [{count}] items.")
 
-    def remove(self, num):
-        super.remove(num)
-        print(f"Removed {num} from the list.")
+    def remove(self, item):
+        """Remove item and print message."""
+        print(f"Removed [{item}] from the list.")
+        super().remove(item)
 
-    def pop(self, num):
-        item = super().pop(num)
-        print(f"Popped {item} from the list.")
-        return item
+    def pop(self, index=-1):
+        """Pop item and print message."""
+        item = self[index]
+        print(f"Popped [{item}] from the list.")
+        return super().pop(index)
