@@ -2,6 +2,7 @@
 """Define shapes using abstract base class and duck typing."""
 
 from abc import ABC, abstractmethod
+import math
 
 
 class Shape(ABC):
@@ -25,11 +26,13 @@ class Circle(Shape):
 
     def area(self):
         """Calculate area."""
-        return 3.141592653589793 * (self.radius ** 2)
+        r = self.radius
+        return math.pi * (r * r)
 
     def perimeter(self):
         """Calculate perimeter."""
-        return 2 * 3.141592653589793 * self.radius
+        r = self.radius
+        return 2 * math.pi * ((r * r) ** 0.5)
 
 
 class Rectangle(Shape):
@@ -42,11 +45,15 @@ class Rectangle(Shape):
 
     def area(self):
         """Calculate area."""
-        return self.width * self.height
+        w = self.width
+        h = self.height
+        return ((w * w) ** 0.5) * ((h * h) ** 0.5)
 
     def perimeter(self):
         """Calculate perimeter."""
-        return 2 * (self.width + self.height)
+        w = self.width
+        h = self.height
+        return 2 * (((w * w) ** 0.5) + ((h * h) ** 0.5))
 
 
 def shape_info(shape):
