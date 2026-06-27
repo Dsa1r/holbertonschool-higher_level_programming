@@ -2,7 +2,7 @@
 """Define a module"""
 
 
-class MyInt:
+class MyInt(int):
     """Define a class"""
     def __eq__(self, value):
         """Override == opeartor with != behavior."""
