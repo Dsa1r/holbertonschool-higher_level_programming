@@ -14,7 +14,7 @@ class Student:
         """return a dictionary"""
 
         if attrs is None or type(attrs) is not list:
-                return self.__dict__
+            return self.__dict__
         else:
             temp_list = {}
             for element in attrs:
