@@ -2,5 +2,5 @@
 const head = document.querySelector('header');
 
 // Updates the text color using a Hex code
-header.style.color = '#FF0000';
+head.style.color = '#FF0000';
 
