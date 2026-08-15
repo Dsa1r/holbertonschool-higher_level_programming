@@ -1,6 +1,2 @@
 #!/usr/bin/node
-const head = document.querySelector('header');
-
-// Updates the text color using a Hex code
-head.style.color = '#FF0000';
-
+document.querySelector('header').style.color = '#FF0000';

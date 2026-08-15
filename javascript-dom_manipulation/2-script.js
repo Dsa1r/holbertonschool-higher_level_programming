@@ -1,4 +1,4 @@
 #!/usr/bin/node
 document.getElementById('red_header').addEventListener('click', function() {
-  document.querySelector('header').style.color = '#FF0000';
+  document.querySelector('header').classList.add('red');
 });
